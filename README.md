@@ -24,7 +24,7 @@ Create a kuberntes config file for the user
 ```
 touch ~/test.kube.conf 
 export KUBECONFIG=~/test.kube.conf
-kubectl config set-cluster test --server=https://${cluster-address}:6443 --certificate-authority=/etc/kubernetes/pki/ca.crt
+kubectl config set-cluster test --server=https://${cluster_address}:6443 --certificate-authority=/etc/kubernetes/pki/ca.crt
 kubectl config set-credentials test --client-certificate=test.crt --namespace=nsrbac --client-key=test.key
 kubectl config set-context test --cluster=test --user=test
 #Please check changes of ~/test.kube.conf after each above commands.
